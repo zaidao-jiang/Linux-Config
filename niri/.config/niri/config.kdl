@@ -1,0 +1,475 @@
+// Author: jiangshan
+// Modifydate: 2026.1.11
+// Reference Wiki: [Niri Wiki]:(https://yalter.github.io/niri/Configuration)
+
+
+
+
+// You can get condition about outputs by using "niri msg outputs" 
+// You can get more actions that you can bind by using "niri msg action"
+// You can find more information about keyboard configuration by running "man 7 xkeyboard-config"
+
+
+
+
+// Input Devices Configuration
+input {
+	// Set Mod Key 
+    		mod-key "Super"
+    		mod-key-nested "Alt"
+
+
+	// Keyboard Configuration
+    		keyboard {
+        		xkb {
+            			// layout "us"
+            			// variant "colemak_dh_ortho"
+            			// options "compose:ralt,ctrl:nocaps"
+            			// model ""
+            			// rules ""
+            			// file "~/.config/keymap.xkb"
+        		}
+
+        		// repeat-delay 600
+        		// repeat-rate 25
+        		// track-layout "global"
+        		numlock
+    		}	
+
+
+	// Touchpad Configuration
+    		touchpad {
+        		// off
+        		tap
+        		// dwt
+        		// dwtp
+        		// drag false
+        		// drag-lock
+        		natural-scroll
+        		// accel-speed 0.2
+        		// accel-profile "flat"
+        		// scroll-factor 1.0
+        		// scroll-factor vertical=1.0 horizontal=-2.0
+        		// scroll-method "two-finger"
+        		// scroll-button 273
+        		// scroll-button-lock
+        		// tap-button-map "left-middle-right"
+        		// click-method "clickfinger"
+        		// left-handed
+        		// disabled-on-external-mouse
+        		// middle-emulation
+    		}
+
+
+	// Mouse Configuration
+    		mouse {
+        		// off
+        		// natural-scroll
+        		// accel-speed 0.2
+        		// accel-profile "flat"
+        		// scroll-factor 1.0
+        		// scroll-factor vertical=1.0 horizontal=-2.0
+        		// scroll-method "no-scroll"
+        		// scroll-button 273
+        		// scroll-button-lock
+        		// left-handed
+        		// middle-emulation
+    		}
+
+
+	// Trackpoint Configuration
+    		trackpoint {
+        		// off
+        		// natural-scroll
+        		// accel-speed 0.2
+        		// accel-profile "flat"
+        		// scroll-method "on-button-down"
+        		// scroll-button 273
+        		// scroll-button-lock
+        		// left-handed
+        		// middle-emulation
+    		}
+
+
+	// Trackball Configuration
+    		trackball {
+        		// off
+        		// natural-scroll
+        		// accel-speed 0.2
+        		// accel-profile "flat"
+        		// scroll-method "on-button-down"
+        		// scroll-button 273
+        		// scroll-button-lock
+        		// left-handed
+        		// middle-emulation
+   		}
+
+
+	// Tablet Configuration
+    		tablet {
+        		// off
+        		map-to-output "eDP-1"
+        		// left-handed
+        		// calibration-matrix 1.0 0.0 0.0 0.0 1.0 0.0
+    		}
+
+
+	// Touch Configuration
+    		touch {
+        		// off
+        		map-to-output "eDP-1"
+     	 		// calibration-matrix 1.0 0.0 0.0 0.0 1.0 0.0
+    		}
+
+
+	// Other Configuration
+		focus-follows-mouse max-scroll-amount="0%"
+		// disable-power-key-handling
+    		// warp-mouse-to-focus
+    		// workspace-auto-back-and-forth
+}
+
+
+
+
+// Output Device Configuration 
+output "eDP-1" {
+    	// Display Configuration
+		// off
+    		mode "2880x1620@120.002"
+    		scale 1.5
+    		transform "normal"
+
+
+	// Hot-corners Settings For "eDP-1"
+    		hot-corners {
+        		off
+        		// top-left
+        		// top-right
+        		// bottom-left
+        		// bottom-right
+    		}
+
+
+	// Layout Settings For eDP-1
+    		layout {}
+
+
+	// Other Configuration
+    		variable-refresh-rate
+    		focus-at-startup
+    		// mode custom=true "1920x1080@100"
+    		// modeline 173.00  1920 2048 2248 2576  1080 1083 1088 1120 "-hsync" "+vsync"
+}
+
+
+
+
+// Layout Configuration
+layout {
+    	// Column Display Configuration
+		gaps 5
+		default-column-width { proportion 0.5; }
+
+
+	// Preset Column Widths And Heights
+		preset-column-widths {
+        		proportion 0.5
+        		proportion 1.0
+    		}
+		preset-window-heights {
+        		proportion 0.5	
+        		proportion 1.0
+		}
+
+
+    	// Focus Ring Configuration
+    		focus-ring {
+			// off
+        		width 4
+        		active-color "#7fc8ff"
+        		inactive-color "#505050"
+        		// inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    		}
+
+
+	// Border Configuration
+    		border {
+        		off
+        		width 4
+        		active-color "#ffc87f"
+        		inactive-color "#505050"
+        		urgent-color "#9b0000" 
+        		// active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        		// inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    		}
+
+
+    	// Shadows Configuration
+    		shadow {
+        		// on
+        		// draw-behind-window true
+        		softness 30
+        		spread 5
+       			offset x=0 y=5
+        		color "#0007"
+    		}
+
+
+	// Structs Configuration
+    		struts {
+        		// left 64
+        		// right 64
+        		// top 64
+        		// bottom 64
+   		 }
+}
+
+
+
+
+// Animation Configuration
+animations {
+	// General Settings
+		// off
+    		// slowdown 3.0
+
+		
+    	// Individual Animations.
+		workspace-switch {
+        		spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    		}
+    	    	window-open {
+        		duration-ms 150
+        		curve "ease-out-expo"
+    		}
+    		window-close {
+        		duration-ms 150
+        		curve "ease-out-quad"
+		}
+    		horizontal-view-movement {
+        		spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    		}
+    		window-movement {
+        		spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+   		}
+    		window-resize {
+        		spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    		}
+    		config-notification-open-close {
+        		spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    		}
+    		exit-confirmation-open-close {
+        		spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    		}
+    		screenshot-ui-open {
+        		duration-ms 200
+        		curve "ease-out-quad"
+    		}
+    		overview-open-close {
+        		spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    		}
+    		recent-windows-close {
+        		spring damping-ratio=1.0 stiffness=800 epsilon=0.001
+    		}
+}
+
+
+
+
+// Bind Configuration
+binds {
+    	// Bind For Niri General Settings 
+		// shows a list of important hotkeys.
+    			Mod+Shift+Slash { show-hotkey-overlay; }
+    		// Overview
+   	 		Mod+O repeat=false { toggle-overview; }
+    			Mod+Tab { focus-workspace-previous; }
+		// Close Column
+			Mod+Q repeat=false { close-window; }
+		// Quit Niri
+    			Mod+Shift+E { quit; }
+    			Ctrl+Alt+Delete { quit; }
+    		// Powers off the monitors.
+    			Mod+Shift+P { power-off-monitors; }
+
+
+	// Bind For Application Command
+    		// Bind Keys For Launching Application
+    			Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+    		// Bind Keys For Runing Shell Command
+    			Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    		// Bind Keys For PipeWire & WirePlumber.
+    		// The allow-when-locked=true property makes them work even when the session is locked.
+    			F3 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    			F2 allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    			F1 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    			F9 allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    		// Bind Keys For Playerctl.
+    			XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    			XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+    			XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+    			XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    		// Bind Keys For Brightnessctl.
+    			F5   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    			F4   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+		// Bind Keys For Screenshot
+   	 		Print { screenshot; }
+   			Ctrl+Print { screenshot-screen; }
+   			Alt+Print { screenshot-window; }
+
+
+	// Bind Keys For Column Movement
+ 		// Switch Column
+			Mod+Left  { focus-column-left; }
+    			Mod+Right { focus-column-right; }
+		// Move the focused window between the floating and the tiling layout.
+    			Mod+V       { toggle-window-floating; }
+    			Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+		// Center Column
+    			Mod+C { center-column; }
+    			Mod+Ctrl+C { center-visible-columns; }
+		// Move The Focus Column Between Workspaces
+    			Mod+Ctrl+Left  { move-column-left; }
+    			Mod+Ctrl+Right { move-column-right; }
+   			Mod+Ctrl+Down  { move-column-to-workspace-down; }
+    			Mod+Ctrl+Up    { move-column-to-workspace-up; }    	
+			Mod+Ctrl+1 { move-column-to-workspace 1; }
+    			Mod+Ctrl+2 { move-column-to-workspace 2; }
+    			Mod+Ctrl+3 { move-column-to-workspace 3; }
+    			Mod+Ctrl+4 { move-column-to-workspace 4; }
+    			Mod+Ctrl+5 { move-column-to-workspace 5; }
+    			Mod+Ctrl+6 { move-column-to-workspace 6; }
+    			Mod+Ctrl+7 { move-column-to-workspace 7; }
+    			Mod+Ctrl+8 { move-column-to-workspace 8; }
+    			Mod+Ctrl+9 { move-column-to-workspace 9; }
+		// Move The Focus Column Overlay Left Or Right Column
+    			Mod+Ctrl+BracketLeft  { consume-or-expel-window-left; }
+    			Mod+Ctrl+BracketRight { consume-or-expel-window-right; }
+	
+	
+	// Bind Keys For Workspace Movement
+		// Switch Workspace
+    			Mod+Down    { focus-workspace-down; }
+    			Mod+Up      { focus-workspace-up; }
+			Mod+1       { focus-workspace 1; }
+    			Mod+2  	    { focus-workspace 2; }
+    			Mod+3       { focus-workspace 3; }
+    			Mod+4       { focus-workspace 4; }
+    			Mod+5       { focus-workspace 5; }
+    			Mod+6       { focus-workspace 6; }
+    			Mod+7       { focus-workspace 7; }
+    			Mod+8       { focus-workspace 8; }
+    			Mod+9       { focus-workspace 9; }
+		// Move The Focus Workspace
+    			Mod+Shift+Down    { move-workspace-down; }
+    			Mod+Shift+Up      { move-workspace-up; }
+
+	
+	// Bind Keys For Monitor Movement
+		// Switch Monitor
+    			Mod+Shift+j  { focus-monitor-left; }
+    			Mod+Shift+k  { focus-monitor-down; }
+    			Mod+Shift+i  { focus-monitor-up; }
+    			Mod+Shift+l  { focus-monitor-right; }
+		// Move The Focus Colunm Between Monitors
+    			Mod+Shift+Ctrl+j  { move-column-to-monitor-left; }
+    			Mod+Shift+Ctrl+k  { move-column-to-monitor-down; }
+    			Mod+Shift+Ctrl+i  { move-column-to-monitor-up; }
+    			Mod+Shift+Ctrl+l  { move-column-to-monitor-right; }
+
+
+	// Bind Keys For Column Size
+    		// Switch Preset Size
+			Mod+R { switch-preset-column-width; }
+    			Mod+Shift+R { switch-preset-window-height; }
+    			Mod+Ctrl+R { reset-window-height; }
+		// Max Column Size
+			Mod+F { maximize-column; }
+    			Mod+Shift+F { fullscreen-window; }
+			Mod+Ctrl+F { expand-column-to-available-width; }
+
+    		// Adjust Column Width 
+    		// This command can also set width in pixels: "1000",
+		// adjust width in pixels: "-5" or "+5"
+    		// set width as a percentage of screen width: "25%"
+    		// adjust width as a percentage of screen width: "-10%" or "+10%"
+    			Mod+Minus { set-column-width "-10%"; }
+    			Mod+Equal { set-column-width "+10%"; }
+    			Mod+Shift+Minus { set-window-height "-10%"; }
+    			Mod+Shift+Equal { set-window-height "+10%"; }
+
+
+    	// Other Configuration
+    		// The Allow-inhibiting=False Property Ensures Niri Always Processes Them
+   			Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    		// Toggle tabbed column display mode.
+    		// Windows in this column will appear as vertical tabs,rather than stacked on top of each other.
+    			Mod+W { toggle-column-tabbed-display; }
+    		// Actions to switch layouts.
+    			// Mod+Space       { switch-layout "next"; }
+    			// Mod+Shift+Space { switch-layout "prev"; }
+
+}
+
+
+
+
+// Window rules let you adjust behavior for individual windows
+	// Work around WezTerm's initial configure bug by setting an empty default-column-width.
+		window-rule {
+    			// This regular expression is intentionally made as specific as possible,
+    			// since this is the default config, and we want no false positives.
+    			// You can get away with just app-id="wezterm" if you want.
+    			match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    			default-column-width {}
+		}
+
+
+	// Open the Firefox picture-in-picture player as floating by default.
+		window-rule {
+    			// This app-id regular expression will work for both:
+    			// - host Firefox (app-id is "firefox")
+    			// - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    			match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    			open-floating true
+		}
+
+	
+	// Example: block out two password managers from screen capture.
+		window-rule {
+    			match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    			match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    			block-out-from "screen-capture"
+   			// block-out-from "screencast"
+		}
+
+
+	// Example: enable rounded corners for all windows.
+		window-rule {
+    			geometry-corner-radius 8
+    			clip-to-geometry true
+		}
+
+
+
+
+// Other Configuration
+	// Start Up With Niri
+		spawn-at-startup "fcitx5"
+		// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+
+	// Hotkey-overlay Setting
+		hotkey-overlay {
+    			// skip-at-startup
+		}
+
+	
+	// Whether Display csd
+		prefer-no-csd
+
+
+	// Change Screenshots Path
+		screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+		// screenshot-path null

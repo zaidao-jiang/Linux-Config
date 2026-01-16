@@ -1,0 +1,36 @@
+# Author: jiangshan
+# Modifydate: 2016.1.14
+# Reference Wiki: [Git Wiki]:(https://git-scm.com/book/en/v2)
+
+
+
+# User Configuration
+[user]
+	name = jiangshan
+	email = zaidao.jiang@gmail.com
+
+
+
+# Init Configuration
+[init]
+	defaultBranch = main
+
+
+
+# Status Configuration
+[status]
+	branch = true
+	showStash = true 
+
+
+
+# Pull Configuration
+[pull]
+	default = current
+
+
+
+# Push Configuration
+[push]
+	autoSetupRemote = true
+	default = current
