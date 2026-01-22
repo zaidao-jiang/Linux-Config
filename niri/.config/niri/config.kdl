@@ -4,11 +4,9 @@
 
 
 
-
 // You can get condition about outputs by using "niri msg outputs" 
 // You can get more actions that you can bind by using "niri msg action"
 // You can find more information about keyboard configuration by running "man 7 xkeyboard-config"
-
 
 
 
@@ -131,7 +129,6 @@ input {
 
 
 
-
 // Output Device Configuration 
 output "eDP-1" {
     	// Display Configuration
@@ -161,7 +158,6 @@ output "eDP-1" {
     		// mode custom=true "1920x1080@100"
     		// modeline 173.00  1920 2048 2248 2576  1080 1083 1088 1120 "-hsync" "+vsync"
 }
-
 
 
 
@@ -227,7 +223,6 @@ layout {
 
 
 
-
 // Animation Configuration
 animations {
 	// General Settings
@@ -273,7 +268,6 @@ animations {
         		spring damping-ratio=1.0 stiffness=800 epsilon=0.001
     		}
 }
-
 
 
 
@@ -414,7 +408,6 @@ binds {
 
 
 
-
 // Window rules let you adjust behavior for individual windows
 	// Work around WezTerm's initial configure bug by setting an empty default-column-width.
 		window-rule {
@@ -450,7 +443,6 @@ binds {
     			geometry-corner-radius 8
     			clip-to-geometry true
 		}
-
 
 
 
