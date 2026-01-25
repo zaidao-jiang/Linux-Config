@@ -26,7 +26,7 @@
 		alias update='sudo pacman -Syu'
 
 	# Control Disk 
-		alias mount='sudo mount -t exfat -o uid=$(id -u),gid=$(id -g),umask=022 /dev/sda1 /mnt'
+		alias mount='sudo mount -t exfat -o uid=$(id -u),gid=$(id -g),umask=022 /dev/sdb1 /mnt'
 		alias umount='sudo umount -l /mnt'
 
 	# Lanuch Application Independently
@@ -82,3 +82,4 @@
 			[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 			rm -f -- "$tmp"
 		}
+. "$HOME/.cargo/env"
